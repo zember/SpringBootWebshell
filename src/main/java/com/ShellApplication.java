@@ -13,6 +13,7 @@ public class ShellApplication {
         settings.getOrDefault("APP_PORT", "8012");
         settings.getOrDefault("APP_NAME", "SpringBootWebshell");
         settings.getOrDefault("APP_ENV", "local");
+        System.out.println("APP_PORT: "+ settings.getOrDefault("APP_PORT", "8012"));
         SpringApplication app = new SpringApplication(ShellApplication.class);
         app.setDefaultProperties(Collections
           .singletonMap("server.port", settings.getOrDefault("APP_PORT", "8012")));
