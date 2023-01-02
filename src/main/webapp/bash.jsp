@@ -1,6 +1,6 @@
 <body style="background: rgb(30,30,30);">
 
-<form method="GET" action="index.jsp">
+<form method="GET" action="bash.jsp">
    <h4 style="color: white;">Command Options</h4>
 
    <select id="osType" name="osType">
