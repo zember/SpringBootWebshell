@@ -12,7 +12,7 @@
     <artifactId>SpringBootWebshll</artifactId>
     <version>1.0</version>
     <name>SpringBootWebshll</name>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <description>SpringBoot Webshll</description>
 
     <properties>
