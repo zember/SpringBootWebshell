@@ -17,6 +17,7 @@ public class ShellApplication {
         SpringApplication app = new SpringApplication(ShellApplication.class);
         Properties properties = new Properties();
         properties.put("server.port", Integer.parseInt(settings.getOrDefault("APP_PORT", "8012")));
+        properties.put("server.contextPath", "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"));
         app.setDefaultProperties(properties);
         app.run(args);
         //SpringApplication.run(ShellApplication.class,args);
