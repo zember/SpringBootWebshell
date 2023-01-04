@@ -14,11 +14,11 @@ public class ShellApplication {
         settings.getOrDefault("APP_NAME", "SpringBootWebshell");
         settings.getOrDefault("APP_ENV", "local");
         System.out.println("APP_PORT: "+ settings.getOrDefault("APP_PORT", "8012"));
-        System.out.println("server.contextPath: " + "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"));
+        System.out.println("server.servlet.context-path: " + "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"));
         SpringApplication app = new SpringApplication(ShellApplication.class);
         Properties properties = new Properties();
         properties.put("server.port", Integer.parseInt(settings.getOrDefault("APP_PORT", "8012")));
-        properties.put("server.contextPath", "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"));
+        properties.put("server.servlet.context-path", "/"+settings.getOrDefault("APP_NAME", "SpringBootWebshell"));
         app.setDefaultProperties(properties);
         app.run(args);
         //SpringApplication.run(ShellApplication.class,args);
