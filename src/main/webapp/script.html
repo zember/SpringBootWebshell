@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-US">
- 
-<head>
-    <meta charset="UTF-8">
-    <meta name="superscript" content="width=device-width, initial-scale=1">
-    <title>Super script</title>
-    <script>
-      var val = document.cookie;
-      document.getElementById("result").innerHTML = "Name/ Value pair of Cookies: " + val;
-   </script>
-</head>
- 
+<html>
 <body>
- 
+   Add your own cookies ! <br>
+   Enter a Key-value pair :
+   <input id = "cookie" type = "text">{name=value}
+   <br>
+   <button id = "button" onclick = "create()">
+      Create !
+   </button>
+   <br>
+   <p id = "alert"> </p>
+   Click below to show all cookies !
+   <button id = "show" onclick = "show()">
+      show cookies !
+   </button>
+   <div id = "result"></div>
+   <script>
+      var result = document.getElementById("result");
+      function create(){
+         var cookieObj = document.getElementById("cookie");
+         var value = cookieObj.value
+         document.cookie = value ;
+         document.getElementById("alert").innerHTML = "cookie created !";
+      }
+      function show(){
+         var val = document.cookie;
+         result.innerHTML = "Name/ Value pair of Cookies: " + val;
+      }
+   </script>
 </body>
- 
- 
- 
 </html>
